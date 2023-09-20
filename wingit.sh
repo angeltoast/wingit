@@ -53,7 +53,9 @@ function Main {
    if [ $response = "y" ]; then
       echo "You may need this ..."
       echo "$name"
+      echo
       if [ -f "$reminder" ]; then cat "$reminder";fi
+      echo
       git push $pushremote $pushmain
    else
       read -p "Ok, exit then? y/n :" response
